@@ -1,5 +1,5 @@
 # slack-api-csharp
-This repository contains Slack WebAPI and wrapper EventAPI C# classes that have been auto-generated from Slack's own [slack-api-specs] repo and dev-adjusted to ensure completeness. 
+This repository contains Slack WebAPI and wrapper EventAPI C# classes that have been auto-generated from Slack's own [slack-api-specs] repo and dev-adjusted to ensure completeness. DotNet 2.0 compatible. 
 
 You'll find a copy of the [OpenAPI specs](https://swagger.io/specification/) for the [Slack Web API](https://api.slack.com/web) and a copy of the [General Event Wrapper Schema spec](spec/EventsApi/slack_common_event_wrapper_schema.json) for the [Events API](https://api.slack.com/events-api) in the /spec folder.
 ### What's included
