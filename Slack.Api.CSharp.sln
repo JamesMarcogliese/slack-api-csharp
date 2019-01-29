@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventsApi", "EventsApi", "{2659D0FA-06CB-4252-BCE4-E3EDB5FFD0D1}"
 	ProjectSection(SolutionItems) = preProject
 		spec\events-api\slack_common_event_wrapper_schema.json = spec\events-api\slack_common_event_wrapper_schema.json
-		spec\events-api\slack_events_api_async_v1.json = spec\events-api\slack_events_api_async_v1.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{FC0431C9-260E-4458-A6AF-AFA23CF7823C}"
@@ -22,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{FC0431
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{46C1AAE1-D33C-4949-AC52-24ADF7E4407F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slack.Api.CSharp.Tests", "test\Slack.Api.CSharp.Tests\Slack.Api.CSharp.Tests.csproj", "{4E14A352-D3B9-4AA2-B57A-D71403DEC885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slack.Api.CSharp.Tests", "test\Slack.Api.CSharp.Tests\Slack.Api.CSharp.Tests.csproj", "{4E14A352-D3B9-4AA2-B57A-D71403DEC885}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
