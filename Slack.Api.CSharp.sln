@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slack.Api.CSharp", "src\Slack.Api.CSharp\Slack.Api.CSharp.csproj", "{93D61080-18E8-4373-827C-9DDCE0A74C75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{16EEBA73-260B-40CF-B826-D52FDD4856FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "spec", "spec", "{EF347A2B-A03C-4BF0-A90E-CA0B6C4D2158}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventsApi", "EventsApi", "{2659D0FA-06CB-4252-BCE4-E3EDB5FFD0D1}"
+	ProjectSection(SolutionItems) = preProject
+		spec\events-api\slack_common_event_wrapper_schema.json = spec\events-api\slack_common_event_wrapper_schema.json
+		spec\events-api\slack_events_api_async_v1.json = spec\events-api\slack_events_api_async_v1.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{FC0431C9-260E-4458-A6AF-AFA23CF7823C}"
+	ProjectSection(SolutionItems) = preProject
+		spec\web-api\slack_web_openapi_v2.json = spec\web-api\slack_web_openapi_v2.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{46C1AAE1-D33C-4949-AC52-24ADF7E4407F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slack.Api.CSharp.Tests", "test\Slack.Api.CSharp.Tests\Slack.Api.CSharp.Tests.csproj", "{4E14A352-D3B9-4AA2-B57A-D71403DEC885}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93D61080-18E8-4373-827C-9DDCE0A74C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D61080-18E8-4373-827C-9DDCE0A74C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D61080-18E8-4373-827C-9DDCE0A74C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D61080-18E8-4373-827C-9DDCE0A74C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E14A352-D3B9-4AA2-B57A-D71403DEC885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E14A352-D3B9-4AA2-B57A-D71403DEC885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E14A352-D3B9-4AA2-B57A-D71403DEC885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E14A352-D3B9-4AA2-B57A-D71403DEC885}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93D61080-18E8-4373-827C-9DDCE0A74C75} = {16EEBA73-260B-40CF-B826-D52FDD4856FB}
+		{2659D0FA-06CB-4252-BCE4-E3EDB5FFD0D1} = {EF347A2B-A03C-4BF0-A90E-CA0B6C4D2158}
+		{FC0431C9-260E-4458-A6AF-AFA23CF7823C} = {EF347A2B-A03C-4BF0-A90E-CA0B6C4D2158}
+		{4E14A352-D3B9-4AA2-B57A-D71403DEC885} = {46C1AAE1-D33C-4949-AC52-24ADF7E4407F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7790AD20-A8FC-4F16-990E-BBFE6A2DA95D}
+	EndGlobalSection
+EndGlobal
