@@ -96,11 +96,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -247,11 +247,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -402,11 +402,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -914,11 +914,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -1069,11 +1069,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -1224,11 +1224,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -1379,11 +1379,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -1890,11 +1890,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -2053,11 +2053,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -2415,11 +2415,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -2574,11 +2574,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
@@ -2729,11 +2729,11 @@ namespace Slack.Api.CSharp.WebApi
             // Set Headers
             if (token != null)
             {
-                if (_httpRequest.Headers.Contains("token"))
+                if (_httpRequest.Headers.Contains("Authorization"))
                 {
-                    _httpRequest.Headers.Remove("token");
+                    _httpRequest.Headers.Remove("Authorization");
                 }
-                _httpRequest.Headers.TryAddWithoutValidation("token", token);
+                _httpRequest.Headers.TryAddWithoutValidation("Authorization", string.Concat("Bearer ", token));
             }
 
 
