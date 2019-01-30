@@ -1,3 +1,5 @@
+[![NuGet](https://img.shields.io/nuget/v/Slack.Api.CSharp.svg)](https://www.nuget.org/packages/SlackAPI/)
+
 # slack-api-csharp
 This repository contains Slack WebAPI and wrapper EventAPI C# classes that have been auto-generated from Slack's own [slack-api-specs] repo and dev-adjusted to ensure completeness. DotNet 2.0 compatible. 
 
