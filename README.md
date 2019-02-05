@@ -9,9 +9,11 @@ You'll find a copy of the [OpenAPI specs](https://swagger.io/specification/) for
 * [Web API](web-api)
     - Readily useable C# classes based off of the [OpenAPI 2.0 spec](spec/WebApi/slack_web_openapi_v2.json) - covers access token usage of public [Web API](https://api.slack.com/web) methods
 * [Events API](events-api)
-    - A C# class model derived from the [JSON Schema](events-api/slack_common_event_wrapper_schema.json) - covers the basic event wrapper all event types delivered by Slack
+    - A SlackEvent model derived from the [JSON Schema](events-api/slack_common_event_wrapper_schema.json) that covers the basic event wrapper all event types delivered by Slack
+    - A SlackAction model that covers the basic action events returned from user interaction with app attachments, buttons, lists, etc. 
 
-Simply import the nuget package into your project to use. 
+## Examples
+Simply import the nuget package into your project to use.
 Examples in the [wiki](https://github.com/JamesMarcogliese/slack-api-csharp/wiki).
 
 ## Installation
