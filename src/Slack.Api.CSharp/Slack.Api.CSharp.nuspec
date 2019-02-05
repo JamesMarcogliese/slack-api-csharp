@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.1</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/JamesMarcogliese/slack-api-csharp</projectUrl>
+    <iconUrl>https://i.imgur.com/oKAzpvr.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release. Contains .Net classes for Slack's WebApi and a wrapper object for EventApi.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>slack csharp api webapi eventapi slackapi .net rest async</tags>
+	<dependencies>
+		<group targetFramework="uap">
+			<dependency id="Microsoft.Rest.ClientRuntime" version="2.3.19" />
+			<dependency id="Newtonsoft.Json" version="12.0.1" />
+		</group>
+	</dependencies>
+  </metadata>
+</package>

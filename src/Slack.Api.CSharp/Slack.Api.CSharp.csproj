@@ -2,6 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>JamesMarcogliese</Authors>
+    <PackageProjectUrl>https://github.com/JamesMarcogliese/slack-api-csharp</PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <Company />
+    <Description>.Net Implementation of Slack's WebAPI and EventAPI Wrapper - Generated from https://github.com/slackapi/slack-api-specs</Description>
+    <PackageTags>slack csharp api webapi eventapi slackapi .net rest async</PackageTags>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/JamesMarcogliese/slack-api-csharp/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Added missing dependencies.</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget></PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>

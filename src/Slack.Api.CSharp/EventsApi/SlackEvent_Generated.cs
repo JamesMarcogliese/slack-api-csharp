@@ -4,7 +4,7 @@
 //
 //    using Slack.Api.CSharp.EventsApi;
 //
-//    var eventModel = EventModel.FromJson(jsonString);
+//    var slackEvent = SlackEvent.FromJson(jsonString);
 
 namespace Slack.Api.CSharp.EventsApi
 {
@@ -63,7 +63,7 @@ namespace Slack.Api.CSharp.EventsApi
         public static SlackEvent FromJson(string json) => JsonConvert.DeserializeObject<SlackEvent>(json, Converter.Settings);
     }
 
-    public static class Serialize
+    public static partial class Serialize
     {
         public static string ToJson(this SlackEvent self) => JsonConvert.SerializeObject(self, Converter.Settings);
     }
