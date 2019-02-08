@@ -11,8 +11,8 @@
     <PackageTags>slack csharp api webapi eventapi slackapi .net rest async</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <PackageLicenseUrl>https://github.com/JamesMarcogliese/slack-api-csharp/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.1.1</Version>
-    <PackageReleaseNotes>Fixed auto-generated datatypes.</PackageReleaseNotes>
+    <Version>1.1.2</Version>
+    <PackageReleaseNotes>Fixed SlackAction class.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
