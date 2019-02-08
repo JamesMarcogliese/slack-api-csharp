@@ -50,7 +50,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<AddOKResponseModelModelModel>> AddWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string channel = default(string), string file = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<AddOKResponseModelModelModel>> AddWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), string timestamp = default(string), string channel = default(string), string file = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Lists stars for a user.
         /// <see href="https://api.slack.com/methods/stars.list" />
@@ -107,6 +107,6 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<RemoveOKResponseModelModel>> RemoveWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string channel = default(string), string file = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<RemoveOKResponseModelModel>> RemoveWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), string timestamp = default(string), string channel = default(string), string file = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

@@ -553,7 +553,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<HistoryOKResponseModel>> HistoryWithHttpMessagesAsync(bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<HistoryOKResponseModel>> HistoryWithHttpMessagesAsync(bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -2207,7 +2207,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<RepliesOKResponseModel>> RepliesWithHttpMessagesAsync(bool? inclusive = default(bool?), double? ts = default(double?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<RepliesOKResponseModel>> RepliesWithHttpMessagesAsync(bool? inclusive = default(bool?), string ts = default(string), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;

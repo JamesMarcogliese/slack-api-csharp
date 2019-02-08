@@ -298,7 +298,7 @@ namespace Slack.Api.CSharp.WebApi
             /// `types=spaces,snippets`.The default value is `all`, which does not filter
             /// the list.
             /// </param>
-            public static ListOKResponseModelModelModelModelModel List(this IFiles operations, string count = default(string), string channel = default(string), double? tsTo = default(double?), double? tsFrom = default(double?), string token = default(string), string user = default(string), string page = default(string), string types = default(string))
+            public static ListOKResponseModelModelModelModelModel List(this IFiles operations, string count = default(string), string channel = default(string), int? tsTo = default(int?), int? tsFrom = default(int?), string token = default(string), string user = default(string), string page = default(string), string types = default(string))
             {
                 return operations.ListAsync(count, channel, tsTo, tsFrom, token, user, page, types).GetAwaiter().GetResult();
             }
@@ -347,7 +347,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ListOKResponseModelModelModelModelModel> ListAsync(this IFiles operations, string count = default(string), string channel = default(string), double? tsTo = default(double?), double? tsFrom = default(double?), string token = default(string), string user = default(string), string page = default(string), string types = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ListOKResponseModelModelModelModelModel> ListAsync(this IFiles operations, string count = default(string), string channel = default(string), int? tsTo = default(int?), int? tsFrom = default(int?), string token = default(string), string user = default(string), string page = default(string), string types = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ListWithHttpMessagesAsync(count, channel, tsTo, tsFrom, token, user, page, types, null, cancellationToken).ConfigureAwait(false))
                 {

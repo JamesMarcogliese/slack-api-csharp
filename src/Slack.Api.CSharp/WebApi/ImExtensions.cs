@@ -85,7 +85,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='latest'>
             /// End of time range of messages to include in results.
             /// </param>
-            public static HistoryOKResponseModelModelModel History(this IIm operations, int? count = default(int?), bool? unreads = default(bool?), bool? inclusive = default(bool?), string token = default(string), double? oldest = default(double?), string channel = default(string), double? latest = default(double?))
+            public static HistoryOKResponseModelModelModel History(this IIm operations, int? count = default(int?), bool? unreads = default(bool?), bool? inclusive = default(bool?), string token = default(string), string oldest = default(string), string channel = default(string), string latest = default(string))
             {
                 return operations.HistoryAsync(count, unreads, inclusive, token, oldest, channel, latest).GetAwaiter().GetResult();
             }
@@ -121,7 +121,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<HistoryOKResponseModelModelModel> HistoryAsync(this IIm operations, int? count = default(int?), bool? unreads = default(bool?), bool? inclusive = default(bool?), string token = default(string), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<HistoryOKResponseModelModelModel> HistoryAsync(this IIm operations, int? count = default(int?), bool? unreads = default(bool?), bool? inclusive = default(bool?), string token = default(string), string oldest = default(string), string channel = default(string), string latest = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.HistoryWithHttpMessagesAsync(count, unreads, inclusive, token, oldest, channel, latest, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -203,7 +203,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Direct message channel to set reading cursor in.
             /// </param>
-            public static MarkOKResponseModelModel Mark(this IIm operations, string token = default(string), double? ts = default(double?), string channel = default(string))
+            public static MarkOKResponseModelModel Mark(this IIm operations, string token = default(string), string ts = default(string), string channel = default(string))
             {
                 return operations.MarkAsync(token, ts, channel).GetAwaiter().GetResult();
             }
@@ -227,7 +227,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<MarkOKResponseModelModel> MarkAsync(this IIm operations, string token = default(string), double? ts = default(double?), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<MarkOKResponseModelModel> MarkAsync(this IIm operations, string token = default(string), string ts = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.MarkWithHttpMessagesAsync(token, ts, channel, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -305,7 +305,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Direct message channel to fetch thread from
             /// </param>
-            public static RepliesOKResponse Replies(this IIm operations, double? threadTs = default(double?), string token = default(string), string channel = default(string))
+            public static RepliesOKResponse Replies(this IIm operations, string threadTs = default(string), string token = default(string), string channel = default(string))
             {
                 return operations.RepliesAsync(threadTs, token, channel).GetAwaiter().GetResult();
             }
@@ -329,7 +329,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<RepliesOKResponse> RepliesAsync(this IIm operations, double? threadTs = default(double?), string token = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<RepliesOKResponse> RepliesAsync(this IIm operations, string threadTs = default(string), string token = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.RepliesWithHttpMessagesAsync(threadTs, token, channel, null, cancellationToken).ConfigureAwait(false))
                 {

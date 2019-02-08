@@ -80,7 +80,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<DeleteOKResponse>> DeleteWithHttpMessagesAsync(string token = default(string), bool? asUser = default(bool?), double? ts = default(double?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<DeleteOKResponse>> DeleteWithHttpMessagesAsync(string token = default(string), bool? asUser = default(bool?), string ts = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -244,7 +244,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<GetPermalinkOKResponse>> GetPermalinkWithHttpMessagesAsync(string token = default(string), double? messageTs = default(double?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<GetPermalinkOKResponse>> GetPermalinkWithHttpMessagesAsync(string token = default(string), string messageTs = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -818,7 +818,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<PostMessageOKResponse>> PostMessageWithHttpMessagesAsync(string token = default(string), string username = default(string), double? threadTs = default(double?), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<PostMessageOKResponse>> PostMessageWithHttpMessagesAsync(string token = default(string), string username = default(string), string threadTs = default(string), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -1253,7 +1253,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<UpdateOKResponse>> UpdateWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string text = default(string), double? ts = default(double?), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<UpdateOKResponse>> UpdateWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string text = default(string), string ts = default(string), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;

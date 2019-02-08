@@ -83,7 +83,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<AddOKResponseModelModel>> AddWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<AddOKResponseModelModel>> AddWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -266,7 +266,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(bool? full = default(bool?), string fileComment = default(string), double? timestamp = default(double?), string token = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(bool? full = default(bool?), string fileComment = default(string), string timestamp = default(string), string token = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -618,7 +618,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<RemoveOKResponseModel>> RemoveWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<RemoveOKResponseModel>> RemoveWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;

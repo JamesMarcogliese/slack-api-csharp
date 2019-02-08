@@ -23,7 +23,7 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// Initializes a new instance of the ObjsUser class.
         /// </summary>
-        public ObjsUser(string color, bool deleted, string id, bool isAdmin, bool isAppUser, bool isBot, bool isOwner, bool isPrimaryOwner, bool isRestricted, bool isUltraRestricted, string name, ObjsUserProfile profile, string realName, string teamId, string tz, string tzLabel, double tzOffset, double updated, bool? has2fa = default(bool?), string locale = default(string), string presence = default(string))
+        public ObjsUser(string color, bool deleted, string id, bool isAdmin, bool isAppUser, bool isBot, bool isOwner, bool isPrimaryOwner, bool isRestricted, bool isUltraRestricted, string name, ObjsUserProfile profile, string realName, string teamId, string tz, string tzLabel, int tzOffset, int updated, bool? has2fa = default(bool?), string locale = default(string), string presence = default(string))
         {
             Color = color;
             Deleted = deleted;
@@ -152,12 +152,12 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "tz_offset")]
-        public double TzOffset { get; set; }
+        public int TzOffset { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "updated")]
-        public double Updated { get; set; }
+        public int Updated { get; set; }
 
         /// <summary>
         /// Validate the object.

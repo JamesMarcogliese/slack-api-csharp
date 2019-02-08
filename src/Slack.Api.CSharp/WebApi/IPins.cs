@@ -49,7 +49,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<AddOKResponseModel>> AddWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<AddOKResponseModel>> AddWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Lists items pinned to a channel.
         /// <see href="https://api.slack.com/methods/pins.list" />
@@ -104,6 +104,6 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<RemoveOKResponse>> RemoveWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<RemoveOKResponse>> RemoveWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

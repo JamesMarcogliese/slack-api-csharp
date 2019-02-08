@@ -134,7 +134,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<HistoryOKResponseModel>> HistoryWithHttpMessagesAsync(bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<HistoryOKResponseModel>> HistoryWithHttpMessagesAsync(bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve information about a conversation.
         /// <see href="https://api.slack.com/methods/conversations.info" />
@@ -442,7 +442,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<RepliesOKResponseModel>> RepliesWithHttpMessagesAsync(bool? inclusive = default(bool?), double? ts = default(double?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<RepliesOKResponseModel>> RepliesWithHttpMessagesAsync(bool? inclusive = default(bool?), string ts = default(string), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Sets the purpose for a conversation.
         /// <see href="https://api.slack.com/methods/conversations.setPurpose" />

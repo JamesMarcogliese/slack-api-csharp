@@ -38,7 +38,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='file'>
             /// File to add star to.
             /// </param>
-            public static AddOKResponseModelModelModel Add(this IStars operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string channel = default(string), string file = default(string))
+            public static AddOKResponseModelModelModel Add(this IStars operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string channel = default(string), string file = default(string))
             {
                 return operations.AddAsync(token, fileComment, timestamp, channel, file).GetAwaiter().GetResult();
             }
@@ -69,7 +69,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<AddOKResponseModelModelModel> AddAsync(this IStars operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string channel = default(string), string file = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<AddOKResponseModelModelModel> AddAsync(this IStars operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string channel = default(string), string file = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.AddWithHttpMessagesAsync(token, fileComment, timestamp, channel, file, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -144,7 +144,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='file'>
             /// File to remove star from.
             /// </param>
-            public static RemoveOKResponseModelModel Remove(this IStars operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string channel = default(string), string file = default(string))
+            public static RemoveOKResponseModelModel Remove(this IStars operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string channel = default(string), string file = default(string))
             {
                 return operations.RemoveAsync(token, fileComment, timestamp, channel, file).GetAwaiter().GetResult();
             }
@@ -175,7 +175,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<RemoveOKResponseModelModel> RemoveAsync(this IStars operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string channel = default(string), string file = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<RemoveOKResponseModelModel> RemoveAsync(this IStars operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string channel = default(string), string file = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.RemoveWithHttpMessagesAsync(token, fileComment, timestamp, channel, file, null, cancellationToken).ConfigureAwait(false))
                 {

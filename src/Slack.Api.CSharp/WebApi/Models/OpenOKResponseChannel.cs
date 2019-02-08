@@ -23,7 +23,7 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// Initializes a new instance of the OpenOKResponseChannel class.
         /// </summary>
-        public OpenOKResponseChannel(string id, string created = default(string), bool? isIm = default(bool?), bool? isOpen = default(bool?), string lastRead = default(string), ObjsMessage latest = default(ObjsMessage), double? unreadCount = default(double?), double? unreadCountDisplay = default(double?), string user = default(string))
+        public OpenOKResponseChannel(string id, string created = default(string), bool? isIm = default(bool?), bool? isOpen = default(bool?), string lastRead = default(string), ObjsMessage latest = default(ObjsMessage), int? unreadCount = default(int?), int? unreadCountDisplay = default(int?), string user = default(string))
         {
             Created = created;
             Id = id;
@@ -75,12 +75,12 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "unread_count")]
-        public double? UnreadCount { get; set; }
+        public int? UnreadCount { get; set; }
 
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "unread_count_display")]
-        public double? UnreadCountDisplay { get; set; }
+        public int? UnreadCountDisplay { get; set; }
 
         /// <summary>
         /// </summary>

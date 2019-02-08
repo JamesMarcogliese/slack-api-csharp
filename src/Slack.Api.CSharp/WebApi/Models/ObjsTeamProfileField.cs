@@ -27,7 +27,7 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// </summary>
         /// <param name="type">Possible values include: 'text', 'date', 'link',
         /// 'mailto', 'options_list', 'user'</param>
-        public ObjsTeamProfileField(string hint, string id, string label, IList<string> options, double ordering, string type, string fieldName = default(string), bool? isHidden = default(bool?), IList<string> possibleValues = default(IList<string>))
+        public ObjsTeamProfileField(string hint, string id, string label, IList<string> options, int ordering, string type, string fieldName = default(string), bool? isHidden = default(bool?), IList<string> possibleValues = default(IList<string>))
         {
             FieldName = fieldName;
             Hint = hint;
@@ -79,7 +79,7 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "ordering")]
-        public double Ordering { get; set; }
+        public int Ordering { get; set; }
 
         /// <summary>
         /// </summary>

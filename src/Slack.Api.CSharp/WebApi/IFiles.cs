@@ -199,7 +199,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<ListOKResponseModelModelModelModelModel>> ListWithHttpMessagesAsync(string count = default(string), string channel = default(string), double? tsTo = default(double?), double? tsFrom = default(double?), string token = default(string), string user = default(string), string page = default(string), string types = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<ListOKResponseModelModelModelModelModel>> ListWithHttpMessagesAsync(string count = default(string), string channel = default(string), int? tsTo = default(int?), int? tsFrom = default(int?), string token = default(string), string user = default(string), string page = default(string), string types = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Revokes public/external sharing access for a file
         /// <see href="https://api.slack.com/methods/files.revokePublicURL" />

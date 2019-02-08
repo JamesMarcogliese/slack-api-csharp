@@ -23,7 +23,7 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// Initializes a new instance of the ObjsInvitingUser class.
         /// </summary>
-        public ObjsInvitingUser(string id, bool isAppUser, bool isRestricted, bool isUltraRestricted, string name, ObjsUserProfileShortest profile, string teamId, double updated, string realName = default(string))
+        public ObjsInvitingUser(string id, bool isAppUser, bool isRestricted, bool isUltraRestricted, string name, ObjsUserProfileShortest profile, string teamId, int updated, string realName = default(string))
         {
             Id = id;
             IsAppUser = isAppUser;
@@ -85,7 +85,7 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "updated")]
-        public double Updated { get; set; }
+        public int Updated { get; set; }
 
         /// <summary>
         /// Validate the object.

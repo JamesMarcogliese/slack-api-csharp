@@ -181,7 +181,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='latest'>
             /// End of time range of messages to include in results.
             /// </param>
-            public static HistoryOKResponseModel History(this IConversations operations, bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?))
+            public static HistoryOKResponseModel History(this IConversations operations, bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string))
             {
                 return operations.HistoryAsync(inclusive, cursor, token, limit, oldest, channel, latest).GetAwaiter().GetResult();
             }
@@ -223,7 +223,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<HistoryOKResponseModel> HistoryAsync(this IConversations operations, bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<HistoryOKResponseModel> HistoryAsync(this IConversations operations, bool? inclusive = default(bool?), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.HistoryWithHttpMessagesAsync(inclusive, cursor, token, limit, oldest, channel, latest, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -742,7 +742,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='latest'>
             /// End of time range of messages to include in results.
             /// </param>
-            public static RepliesOKResponseModel Replies(this IConversations operations, bool? inclusive = default(bool?), double? ts = default(double?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?))
+            public static RepliesOKResponseModel Replies(this IConversations operations, bool? inclusive = default(bool?), string ts = default(string), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string))
             {
                 return operations.RepliesAsync(inclusive, ts, cursor, token, limit, oldest, channel, latest).GetAwaiter().GetResult();
             }
@@ -787,7 +787,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<RepliesOKResponseModel> RepliesAsync(this IConversations operations, bool? inclusive = default(bool?), double? ts = default(double?), string cursor = default(string), string token = default(string), int? limit = default(int?), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<RepliesOKResponseModel> RepliesAsync(this IConversations operations, bool? inclusive = default(bool?), string ts = default(string), string cursor = default(string), string token = default(string), int? limit = default(int?), string oldest = default(string), string channel = default(string), string latest = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.RepliesWithHttpMessagesAsync(inclusive, ts, cursor, token, limit, oldest, channel, latest, null, cancellationToken).ConfigureAwait(false))
                 {

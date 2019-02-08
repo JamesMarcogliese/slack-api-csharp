@@ -49,7 +49,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<DeleteOKResponse>> DeleteWithHttpMessagesAsync(string token = default(string), bool? asUser = default(bool?), double? ts = default(double?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<DeleteOKResponse>> DeleteWithHttpMessagesAsync(string token = default(string), bool? asUser = default(bool?), string ts = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve a permalink URL for a specific extant message
         /// <see href="https://api.slack.com/methods/chat.getPermalink" />
@@ -75,7 +75,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<GetPermalinkOKResponse>> GetPermalinkWithHttpMessagesAsync(string token = default(string), double? messageTs = default(double?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<GetPermalinkOKResponse>> GetPermalinkWithHttpMessagesAsync(string token = default(string), string messageTs = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Share a me message into a channel.
         /// <see href="https://api.slack.com/methods/chat.meMessage" />
@@ -229,7 +229,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<PostMessageOKResponse>> PostMessageWithHttpMessagesAsync(string token = default(string), string username = default(string), double? threadTs = default(double?), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<PostMessageOKResponse>> PostMessageWithHttpMessagesAsync(string token = default(string), string username = default(string), string threadTs = default(string), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Provide custom unfurl behavior for user-posted URLs
         /// <see href="https://api.slack.com/methods/chat.unfurl" />
@@ -321,6 +321,6 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<UpdateOKResponse>> UpdateWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string text = default(string), double? ts = default(double?), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<UpdateOKResponse>> UpdateWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string text = default(string), string ts = default(string), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

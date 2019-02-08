@@ -898,7 +898,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<ListOKResponseModelModelModelModelModel>> ListWithHttpMessagesAsync(string count = default(string), string channel = default(string), double? tsTo = default(double?), double? tsFrom = default(double?), string token = default(string), string user = default(string), string page = default(string), string types = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<ListOKResponseModelModelModelModelModel>> ListWithHttpMessagesAsync(string count = default(string), string channel = default(string), int? tsTo = default(int?), int? tsFrom = default(int?), string token = default(string), string user = default(string), string page = default(string), string types = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;

@@ -40,7 +40,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel where the message to add reaction to was posted.
             /// </param>
-            public static AddOKResponseModelModel Add(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string))
+            public static AddOKResponseModelModel Add(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string))
             {
                 return operations.AddAsync(token, name, fileComment, timestamp, file, channel).GetAwaiter().GetResult();
             }
@@ -73,7 +73,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<AddOKResponseModelModel> AddAsync(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<AddOKResponseModelModel> AddAsync(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.AddWithHttpMessagesAsync(token, name, fileComment, timestamp, file, channel, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -106,7 +106,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel where the message to get reactions for was posted.
             /// </param>
-            public static object Get(this IReactions operations, bool? full = default(bool?), string fileComment = default(string), double? timestamp = default(double?), string token = default(string), string file = default(string), string channel = default(string))
+            public static object Get(this IReactions operations, bool? full = default(bool?), string fileComment = default(string), string timestamp = default(string), string token = default(string), string file = default(string), string channel = default(string))
             {
                 return operations.GetAsync(full, fileComment, timestamp, token, file, channel).GetAwaiter().GetResult();
             }
@@ -139,7 +139,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<object> GetAsync(this IReactions operations, bool? full = default(bool?), string fileComment = default(string), double? timestamp = default(double?), string token = default(string), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<object> GetAsync(this IReactions operations, bool? full = default(bool?), string fileComment = default(string), string timestamp = default(string), string token = default(string), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(full, fileComment, timestamp, token, file, channel, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -228,7 +228,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel where the message to remove reaction from was posted.
             /// </param>
-            public static RemoveOKResponseModel Remove(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string))
+            public static RemoveOKResponseModel Remove(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string))
             {
                 return operations.RemoveAsync(token, name, fileComment, timestamp, file, channel).GetAwaiter().GetResult();
             }
@@ -261,7 +261,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<RemoveOKResponseModel> RemoveAsync(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<RemoveOKResponseModel> RemoveAsync(this IReactions operations, string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.RemoveWithHttpMessagesAsync(token, name, fileComment, timestamp, file, channel, null, cancellationToken).ConfigureAwait(false))
                 {

@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventsApi", "EventsApi", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{FC0431C9-260E-4458-A6AF-AFA23CF7823C}"
 	ProjectSection(SolutionItems) = preProject
-		spec\web-api\slack_web_openapi_v2.json = spec\web-api\slack_web_openapi_v2.json
+		spec\WebApi\slack_web_openapi_v2.json = spec\WebApi\slack_web_openapi_v2.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{46C1AAE1-D33C-4949-AC52-24ADF7E4407F}"

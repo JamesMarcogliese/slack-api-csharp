@@ -37,7 +37,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel to pin the item in.
             /// </param>
-            public static AddOKResponseModel Add(this IPins operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string))
+            public static AddOKResponseModel Add(this IPins operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string))
             {
                 return operations.AddAsync(token, fileComment, timestamp, file, channel).GetAwaiter().GetResult();
             }
@@ -67,7 +67,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<AddOKResponseModel> AddAsync(this IPins operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<AddOKResponseModel> AddAsync(this IPins operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.AddWithHttpMessagesAsync(token, fileComment, timestamp, file, channel, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -139,7 +139,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel where the item is pinned to.
             /// </param>
-            public static RemoveOKResponse Remove(this IPins operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string))
+            public static RemoveOKResponse Remove(this IPins operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string))
             {
                 return operations.RemoveAsync(token, fileComment, timestamp, file, channel).GetAwaiter().GetResult();
             }
@@ -169,7 +169,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<RemoveOKResponse> RemoveAsync(this IPins operations, string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<RemoveOKResponse> RemoveAsync(this IPins operations, string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.RemoveWithHttpMessagesAsync(token, fileComment, timestamp, file, channel, null, cancellationToken).ConfigureAwait(false))
                 {

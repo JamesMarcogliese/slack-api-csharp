@@ -52,7 +52,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<AddOKResponseModelModel>> AddWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<AddOKResponseModelModel>> AddWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Gets reactions for an item.
         /// <see href="https://api.slack.com/methods/reactions.get" />
@@ -87,7 +87,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(bool? full = default(bool?), string fileComment = default(string), double? timestamp = default(double?), string token = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<object>> GetWithHttpMessagesAsync(bool? full = default(bool?), string fileComment = default(string), string timestamp = default(string), string token = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Lists reactions made by a user.
         /// <see href="https://api.slack.com/methods/reactions.list" />
@@ -152,6 +152,6 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<RemoveOKResponseModel>> RemoveWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<RemoveOKResponseModel>> RemoveWithHttpMessagesAsync(string token = default(string), string name = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

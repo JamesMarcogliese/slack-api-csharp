@@ -80,7 +80,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<AddOKResponseModel>> AddWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<AddOKResponseModel>> AddWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -404,7 +404,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<RemoveOKResponse>> RemoveWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), double? timestamp = default(double?), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<RemoveOKResponse>> RemoveWithHttpMessagesAsync(string token = default(string), string fileComment = default(string), string timestamp = default(string), string file = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;

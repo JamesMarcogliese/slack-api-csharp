@@ -128,7 +128,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<HistoryOKResponseModelModel>> HistoryWithHttpMessagesAsync(int? count = default(int?), bool? unreads = default(bool?), bool? inclusive = default(bool?), string token = default(string), double? oldest = default(double?), string channel = default(string), double? latest = default(double?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<HistoryOKResponseModelModel>> HistoryWithHttpMessagesAsync(int? count = default(int?), bool? unreads = default(bool?), bool? inclusive = default(bool?), string token = default(string), string oldest = default(string), string channel = default(string), string latest = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Gets information about a private channel.
         /// <see href="https://api.slack.com/methods/groups.info" />
@@ -282,7 +282,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<MarkOKResponseModel>> MarkWithHttpMessagesAsync(string token = default(string), double? ts = default(double?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<MarkOKResponseModel>> MarkWithHttpMessagesAsync(string token = default(string), string ts = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Opens a private channel.
         /// <see href="https://api.slack.com/methods/groups.open" />
@@ -361,7 +361,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<RepliesOKResponse>> RepliesWithHttpMessagesAsync(double? threadTs = default(double?), string token = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<RepliesOKResponse>> RepliesWithHttpMessagesAsync(string threadTs = default(string), string token = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Sets the purpose for a private channel.
         /// <see href="https://api.slack.com/methods/groups.setPurpose" />

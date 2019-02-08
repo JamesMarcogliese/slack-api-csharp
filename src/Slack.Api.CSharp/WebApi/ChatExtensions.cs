@@ -37,7 +37,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel containing the message to be deleted.
             /// </param>
-            public static DeleteOKResponse Delete(this IChat operations, string token = default(string), bool? asUser = default(bool?), double? ts = default(double?), string channel = default(string))
+            public static DeleteOKResponse Delete(this IChat operations, string token = default(string), bool? asUser = default(bool?), string ts = default(string), string channel = default(string))
             {
                 return operations.DeleteAsync(token, asUser, ts, channel).GetAwaiter().GetResult();
             }
@@ -67,7 +67,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DeleteOKResponse> DeleteAsync(this IChat operations, string token = default(string), bool? asUser = default(bool?), double? ts = default(double?), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DeleteOKResponse> DeleteAsync(this IChat operations, string token = default(string), bool? asUser = default(bool?), string ts = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.DeleteWithHttpMessagesAsync(token, asUser, ts, channel, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -91,7 +91,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// The ID of the conversation or channel containing the message
             /// </param>
-            public static GetPermalinkOKResponse GetPermalink(this IChat operations, string token = default(string), double? messageTs = default(double?), string channel = default(string))
+            public static GetPermalinkOKResponse GetPermalink(this IChat operations, string token = default(string), string messageTs = default(string), string channel = default(string))
             {
                 return operations.GetPermalinkAsync(token, messageTs, channel).GetAwaiter().GetResult();
             }
@@ -115,7 +115,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<GetPermalinkOKResponse> GetPermalinkAsync(this IChat operations, string token = default(string), double? messageTs = default(double?), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<GetPermalinkOKResponse> GetPermalinkAsync(this IChat operations, string token = default(string), string messageTs = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetPermalinkWithHttpMessagesAsync(token, messageTs, channel, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -331,7 +331,7 @@ namespace Slack.Api.CSharp.WebApi
             /// made visible to everyone in the channel or conversation. Defaults to
             /// `false`.
             /// </param>
-            public static PostMessageOKResponse PostMessage(this IChat operations, string token = default(string), string username = default(string), double? threadTs = default(double?), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?))
+            public static PostMessageOKResponse PostMessage(this IChat operations, string token = default(string), string username = default(string), string threadTs = default(string), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?))
             {
                 return operations.PostMessageAsync(token, username, threadTs, attachments, unfurlLinks, text, unfurlMedia, parse, asUser, mrkdwn, iconEmoji, linkNames, iconUrl, channel, replyBroadcast).GetAwaiter().GetResult();
             }
@@ -407,7 +407,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<PostMessageOKResponse> PostMessageAsync(this IChat operations, string token = default(string), string username = default(string), double? threadTs = default(double?), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<PostMessageOKResponse> PostMessageAsync(this IChat operations, string token = default(string), string username = default(string), string threadTs = default(string), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.PostMessageWithHttpMessagesAsync(token, username, threadTs, attachments, unfurlLinks, text, unfurlMedia, parse, asUser, mrkdwn, iconEmoji, linkNames, iconUrl, channel, replyBroadcast, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -533,7 +533,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel containing the message to be updated.
             /// </param>
-            public static UpdateOKResponse Update(this IChat operations, string token = default(string), string attachments = default(string), string text = default(string), double? ts = default(double?), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string))
+            public static UpdateOKResponse Update(this IChat operations, string token = default(string), string attachments = default(string), string text = default(string), string ts = default(string), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string))
             {
                 return operations.UpdateAsync(token, attachments, text, ts, parse, asUser, linkNames, channel).GetAwaiter().GetResult();
             }
@@ -577,7 +577,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<UpdateOKResponse> UpdateAsync(this IChat operations, string token = default(string), string attachments = default(string), string text = default(string), double? ts = default(double?), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<UpdateOKResponse> UpdateAsync(this IChat operations, string token = default(string), string attachments = default(string), string text = default(string), string ts = default(string), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.UpdateWithHttpMessagesAsync(token, attachments, text, ts, parse, asUser, linkNames, channel, null, cancellationToken).ConfigureAwait(false))
                 {
