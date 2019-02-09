@@ -11,9 +11,10 @@
     <PackageTags>slack csharp api webapi eventapi slackapi .net rest async</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <PackageLicenseUrl>https://github.com/JamesMarcogliese/slack-api-csharp/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.1.2</Version>
-    <PackageReleaseNotes>Fixed SlackAction class.</PackageReleaseNotes>
+    <Version>1.1.3</Version>
+    <PackageReleaseNotes>Fixed Channels.Replies class return.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.1.3.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

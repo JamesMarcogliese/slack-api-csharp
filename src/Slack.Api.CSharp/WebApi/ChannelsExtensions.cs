@@ -607,7 +607,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='channel'>
             /// Channel to fetch thread from
             /// </param>
-            public static RepliesOKResponse Replies(this IChannels operations, string threadTs = default(string), string token = default(string), string channel = default(string))
+            public static RepliesOKResponseModel Replies(this IChannels operations, string threadTs = default(string), string token = default(string), string channel = default(string))
             {
                 return operations.RepliesAsync(threadTs, token, channel).GetAwaiter().GetResult();
             }
@@ -631,7 +631,7 @@ namespace Slack.Api.CSharp.WebApi
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<RepliesOKResponse> RepliesAsync(this IChannels operations, string threadTs = default(string), string token = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<RepliesOKResponseModel> RepliesAsync(this IChannels operations, string threadTs = default(string), string token = default(string), string channel = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.RepliesWithHttpMessagesAsync(threadTs, token, channel, null, cancellationToken).ConfigureAwait(false))
                 {

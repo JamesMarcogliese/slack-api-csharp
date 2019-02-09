@@ -354,7 +354,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<RepliesOKResponse>> RepliesWithHttpMessagesAsync(string threadTs = default(string), string token = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<RepliesOKResponseModel>> RepliesWithHttpMessagesAsync(string threadTs = default(string), string token = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Sets the purpose for a channel.
         /// <see href="https://api.slack.com/methods/channels.setPurpose" />
