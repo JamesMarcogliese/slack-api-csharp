@@ -22,8 +22,8 @@ namespace Slack.Api.CSharp.EventsApi
 
     public partial class TheActualEventAnObjectThatHappened
     {
-        [JsonProperty("username")]
-        public string Username { get; set; }
+        [JsonProperty("user")]
+        public string User { get; set; }
         [JsonProperty("text")]
         public string Text { get; set; }
         [JsonProperty("channel")]
@@ -36,6 +36,8 @@ namespace Slack.Api.CSharp.EventsApi
         public string SubType { get; set; }
         [JsonProperty("bot_id")]
         public string BotId { get; set; }
+        [JsonProperty("client_msg_id")]
+        public string ClientMsgId { get; set; }
     }
 
 }
