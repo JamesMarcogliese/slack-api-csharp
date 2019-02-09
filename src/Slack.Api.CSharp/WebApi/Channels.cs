@@ -1866,7 +1866,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<HttpOperationResponse<RepliesOKResponse>> RepliesWithHttpMessagesAsync(string threadTs = default(string), string token = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<HttpOperationResponse<RepliesOKResponseModel>> RepliesWithHttpMessagesAsync(string threadTs = default(string), string token = default(string), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Tracing
             bool _shouldTrace = ServiceClientTracing.IsEnabled;
@@ -1967,7 +1967,7 @@ namespace Slack.Api.CSharp.WebApi
                 throw ex;
             }
             // Create Result
-            var _result = new HttpOperationResponse<RepliesOKResponse>();
+            var _result = new HttpOperationResponse<RepliesOKResponseModel>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             // Deserialize Response
@@ -1976,7 +1976,7 @@ namespace Slack.Api.CSharp.WebApi
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<RepliesOKResponse>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<RepliesOKResponseModel>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
