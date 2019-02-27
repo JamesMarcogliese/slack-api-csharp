@@ -68,6 +68,10 @@ namespace Slack.Api.CSharp.EventsApi
     {
         [JsonProperty("name")]
         public string Name { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
+        [JsonProperty("value")]
+        public string Value { get; set; }
         [JsonProperty("selected_options")]
         public Selected_Options[] SelectedOptions { get; set; }
     }

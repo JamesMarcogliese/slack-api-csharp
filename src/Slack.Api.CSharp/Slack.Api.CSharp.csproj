@@ -11,10 +11,10 @@
     <PackageTags>slack csharp api webapi eventapi slackapi .net rest async</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <PackageLicenseUrl>https://github.com/JamesMarcogliese/slack-api-csharp/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.1.3</Version>
-    <PackageReleaseNotes>Fixed Channels.Replies class return.</PackageReleaseNotes>
+    <Version>1.1.4</Version>
+    <PackageReleaseNotes>Added SlackAttachment class and fixed the SlackAction class to include missing fields.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.1.3.0</AssemblyVersion>
+    <AssemblyVersion>1.1.4.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
