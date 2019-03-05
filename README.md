@@ -11,6 +11,7 @@ You'll find a copy of the [OpenAPI specs](https://swagger.io/specification/) for
 * [Events API](events-api)
     - A SlackEvent model derived from the [JSON Schema](events-api/slack_common_event_wrapper_schema.json) that covers the basic event wrapper all event types delivered by Slack
     - A SlackAction model that covers the basic action events returned from user interaction with app attachments, buttons, lists, etc. 
+    - A SlackAttachment model that covers message attachment items.
 
 ## Examples
 Simply import the nuget package into your project to use.
