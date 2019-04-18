@@ -114,6 +114,10 @@ namespace Slack.Api.CSharp.WebApi
         /// A JSON-based array of structured attachments, presented as a
         /// URL-encoded string.
         /// </param>
+		/// <param name="blocks">
+		/// A JSON-based array of structured blocks, presented as a 
+		/// URL-encoded string.
+		/// </param>
         /// <param name='text'>
         /// Text of the message to send. See below for an explanation of
         /// [formatting](#formatting). This field is usually required, unless
@@ -149,7 +153,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<PostEphemeralOKResponse>> PostEphemeralWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string text = default(string), bool? linkNames = default(bool?), string parse = default(string), string user = default(string), bool? asUser = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<PostEphemeralOKResponse>> PostEphemeralWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string blocks = default(string), string text = default(string), bool? linkNames = default(bool?), string parse = default(string), string user = default(string), bool? asUser = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Sends a message to a channel.
         /// <see href="https://api.slack.com/methods/chat.postMessage" />
@@ -170,6 +174,10 @@ namespace Slack.Api.CSharp.WebApi
         /// A JSON-based array of structured attachments, presented as a
         /// URL-encoded string.
         /// </param>
+		/// <param name="blocks">
+		/// A JSON-based array of structured blocks, presented as a 
+		/// URL-encoded string.
+		/// </param>
         /// <param name='unfurlLinks'>
         /// Pass true to enable unfurling of primarily text-based content.
         /// </param>
@@ -229,7 +237,7 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<PostMessageOKResponse>> PostMessageWithHttpMessagesAsync(string token = default(string), string username = default(string), string threadTs = default(string), string attachments = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<PostMessageOKResponse>> PostMessageWithHttpMessagesAsync(string token = default(string), string username = default(string), string threadTs = default(string), string attachments = default(string), string blocks = default(string), bool? unfurlLinks = default(bool?), string text = default(string), bool? unfurlMedia = default(bool?), string parse = default(string), bool? asUser = default(bool?), bool? mrkdwn = default(bool?), string iconEmoji = default(string), bool? linkNames = default(bool?), string iconUrl = default(string), string channel = default(string), bool? replyBroadcast = default(bool?), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Provide custom unfurl behavior for user-posted URLs
         /// <see href="https://api.slack.com/methods/chat.unfurl" />
@@ -284,8 +292,13 @@ namespace Slack.Api.CSharp.WebApi
         /// <param name='attachments'>
         /// A JSON-based array of structured attachments, presented as a
         /// URL-encoded string. This field is required when not presenting
-        /// `text`.
+        /// `text` or `blocks`.
         /// </param>
+		/// <param name="blocks">
+		/// A JSON-based array of structured blocks, presented as a 
+		/// URL-encoded string. This field is required when not presenting
+		/// `text` or `attachments`.
+		/// </param>
         /// <param name='text'>
         /// New text for the message, using the [default formatting
         /// rules](/docs/formatting). It's not required when presenting
@@ -321,6 +334,6 @@ namespace Slack.Api.CSharp.WebApi
         /// <exception cref="Microsoft.Rest.SerializationException">
         /// Thrown when unable to deserialize the response
         /// </exception>
-        Task<HttpOperationResponse<UpdateOKResponse>> UpdateWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string text = default(string), string ts = default(string), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<HttpOperationResponse<UpdateOKResponse>> UpdateWithHttpMessagesAsync(string token = default(string), string attachments = default(string), string blocks = default(string), string text = default(string), string ts = default(string), string parse = default(string), bool? asUser = default(bool?), bool? linkNames = default(bool?), string channel = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }
