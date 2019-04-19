@@ -30,11 +30,12 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// Initializes a new instance of the UpdateOKResponse class.
         /// </summary>
         /// <param name="text">Updated message text</param>
-        public UpdateOKResponse(string channel, string text, string ts)
+        public UpdateOKResponse(string channel, string text, string ts, string error)
         {
             Channel = channel;
             Text = text;
             Ts = ts;
+			Error = error;
             CustomInit();
         }
         /// <summary>
@@ -70,6 +71,9 @@ namespace Slack.Api.CSharp.WebApi.Models
         /// </summary>
         [JsonProperty(PropertyName = "ok")]
         public static bool Ok { get; private set; }
+
+		[JsonProperty("error")]
+		public string Error { get; set; }
 
         /// <summary>
         /// Validate the object.
