@@ -8,9 +8,19 @@
 	using Newtonsoft.Json.Converters;
 	using Newtonsoft.Json.Linq;
 
+	public enum BlockType
+	{
+		section,
+		divider,
+		image,
+		actions,
+		context
+	}
+
 	[JsonConverter(typeof(JsonBlockConverter))]
 	public abstract class SlackBlock
 	{
+		public BlockType BlockType => (BlockType)Enum.Parse(typeof(BlockType), Type, true);
 		[JsonProperty("type")]
 		public string Type { get; set; }
 		[JsonProperty("block_id")]
@@ -39,52 +49,10 @@
 
 			public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 			{
-				//				case "section":
-				//	return new SectionBlock();
-				//case "divider":
-				//	return new DividerBlock();
-				//case "image":
-				//	return new ImageBlock();
-				//case "actions":
-				//	return new ActionBlock();
-				//case "context":
-				//	return new ContextBlock();
-				//JObject jo = null;
-				//if (value is SectionBlock)
-				//{
-				//	SectionBlock obj = (SectionBlock)value;
-				//	JToken jt = JToken.FromObject(obj);
-				//	Console.WriteLine(jt.ToString());
-				//}
-				//else if (value is DividerBlock)
-				//{
-				//	DividerBlock obj = (DividerBlock)value;
-				//	jo = JObject.FromObject(obj);
-				//}
-				//else if (value is ImageBlock)
-				//{
-				//	ImageBlock obj = (ImageBlock)value;
-				//	jo = JObject.FromObject(obj);
-				//}
-				//else if (value is ActionBlock)
-				//{
-				//	ActionBlock obj = (ActionBlock)value;
-				//	jo = JObject.FromObject(obj);
-				//}
-				//else if (value is ContextBlock)
-				//{
-				//	ContextBlock obj = (ContextBlock)value;
-				//	jo = JObject.FromObject(obj);
-				//}
-				//else
-				//{
-				//	throw new Exception("Unknown block type!");
-				//}
-				//jo.WriteTo(writer);
 				SlackBlock baseBlock = (SlackBlock)value;
 				JObject block = new JObject();
 				block["type"] = baseBlock.Type;
-				block["block_id"] = baseBlock.Block_ID;
+				if (baseBlock.Block_ID != null) block["block_id"] = baseBlock.Block_ID;
 				if (value is SectionBlock)
 				{
 					SectionBlock derivedBlock = (SectionBlock)value;
@@ -122,11 +90,18 @@
 		public SlackElement Accessory { get; set; }
 		[JsonProperty("text")]
 		public SlackText Text { get; set; }
+		public SectionBlock()
+		{
+			Type = "section";
+		}
 	}
 
 	public class DividerBlock : SlackBlock
 	{
-
+		public DividerBlock()
+		{
+			Type = "divider";
+		}
 	}
 
 	public class ImageBlock : SlackBlock
@@ -137,23 +112,51 @@
 		public string AltText { get; set; }
 		[JsonProperty("title")]
 		public SlackText Title { get; set; }
+		public ImageBlock()
+		{
+			Type = "image";
+		}
 	}
 
 	public class ActionBlock : SlackBlock
 	{
 		[JsonProperty("elements")]
 		public InteractiveElement[] Elements { get; set; }
+		public ActionBlock()
+		{
+			Type = "actions";
+		}
 	}
 
 	public class ContextBlock : SlackBlock
 	{
 		[JsonProperty("elements")]
 		public NonInteractiveElement[] Elements { get; set; }
+		public ContextBlock()
+		{
+			Type = "context";
+		}
+	}
+
+	public enum ElementType
+	{
+		mrkdwn,
+		plain_text,
+		image,
+		button,
+		static_select,
+		external_select,
+		users_select,
+		conversations_select,
+		channels_select,
+		overflow,
+		datepicker
 	}
 
 	[JsonConverter(typeof(JsonElementConverter))]
 	public abstract class SlackElement
 	{
+		public ElementType ElementType => (ElementType)Enum.Parse(typeof(ElementType), Type, true);
 		[JsonProperty("type")]
 		public string Type { get; set; }
 
@@ -165,9 +168,8 @@
 				switch (typeName)
 				{
 					case "mrkdwn":
-						return new SlackText();
 					case "plain_text":
-						return new SlackText();
+						return new SlackText(typeName == "mrkdwn");
 					case "image":
 						return new ImageElement();
 					case "button":
@@ -288,6 +290,11 @@
 		}
 	}
 
+	public abstract class NonInteractiveElement : SlackElement
+	{
+
+	}
+
 	public partial class SlackText : NonInteractiveElement
 	{
 		[JsonProperty("text")]
@@ -296,11 +303,17 @@
 		public bool Emoji { get; set; }
 		[JsonProperty("verbatim")]
 		public bool Verbatim { get; set; }
-	}
 
-	public abstract class NonInteractiveElement : SlackElement
-	{
+		public SlackText(bool mrkdwn)
+		{
+			Type = mrkdwn ? "mrkdwn" : "plain_text";
+		}
 
+		public SlackText(string text, bool mrkdwn = false)
+		{
+			this.Text = text;
+			Type = mrkdwn ? "mrkdwn" : "plain_text";
+		}
 	}
 
 	public class ImageElement : NonInteractiveElement
@@ -309,6 +322,10 @@
 		public string Image_URL { get; set; }
 		[JsonProperty("alt_text")]
 		public string Alt_Text { get; set; }
+		public ImageElement()
+		{
+			Type = "image";
+		}
 	}
 
 	public abstract class InteractiveElement : SlackElement
@@ -329,6 +346,10 @@
 		public string Value { get; set; }
 		[JsonProperty("style")]
 		public string Style { get; set; }
+		public ButtonElement()
+		{
+			Type = "button";
+		}
 	}
 
 	public abstract class SelectOrDatePickerElement : InteractiveElement
@@ -345,6 +366,10 @@
 		public SlackOptionGroup[] OptionGroups { get; set; }
 		[JsonProperty("initial_option")]
 		public SlackOption InitialOption { get; set; }
+		public StaticSelectElement()
+		{
+			Type = "static_select";
+		}
 	}
 
 	public class ExternalSelectElement : SelectOrDatePickerElement
@@ -353,36 +378,60 @@
 		public SlackOption InitialOption { get; set; }
 		[JsonProperty("min_query_length")]
 		public int MinQueryLength { get; set; }
+		public ExternalSelectElement()
+		{
+			Type = "external_select";
+		}
 	}
 
 	public class UserSelectElement : SelectOrDatePickerElement
 	{
 		[JsonProperty("initial_user")]
 		public string InitialUser { get; set; }
+		public UserSelectElement()
+		{
+			Type = "users_select";
+		}
 	}
 
 	public class ConversationSelectElement : SelectOrDatePickerElement
 	{
 		[JsonProperty("initial_conversation")]
 		public string InitialConversation { get; set; }
+		public ConversationSelectElement()
+		{
+			Type = "conversations_select";
+		}
 	}
 
 	public class ChannelSelectElement : SelectOrDatePickerElement
 	{
 		[JsonProperty("initial_channel")]
 		public string InitialChannel { get; set; }
+		public ChannelSelectElement()
+		{
+			Type = "channels_select";
+		}
 	}
 
 	public class DatePickerElement : SelectOrDatePickerElement
 	{
 		[JsonProperty("initial_date")]
 		public string InitialDate { get; set; }
+		public DatePickerElement()
+		{
+			Type = "datepicker";
+		}
 	}
 
 	public class OverflowElement : InteractiveElement
 	{
 		[JsonProperty("options")]
 		public SlackOption[] Options { get; set; }
+		public OverflowElement()
+		{
+			Type = "overflow";
+		}
 	}
 
 	public partial class SlackConfirm
