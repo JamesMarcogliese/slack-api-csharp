@@ -14,11 +14,11 @@
     <releaseNotes>Added User and ClientMsgId property to SlackEvent.</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>slack csharp api webapi eventapi slackapi .net rest async core</tags>
-	<dependencies>
-		<group targetFramework="uap">
-			<dependency id="Microsoft.Rest.ClientRuntime" version="2.3.19" />
-			<dependency id="Newtonsoft.Json" version="12.0.1" />
-		</group>
-	</dependencies>
+    <dependencies>
+        <group targetFramework="uap">
+            <dependency id="Microsoft.Rest.ClientRuntime" version="2.3.19" />
+            <dependency id="Newtonsoft.Json" version="12.0.1" />
+        </group>
+    </dependencies>
   </metadata>
 </package>

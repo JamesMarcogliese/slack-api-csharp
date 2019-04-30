@@ -114,10 +114,10 @@ namespace Slack.Api.CSharp.WebApi
         /// A JSON-based array of structured attachments, presented as a
         /// URL-encoded string.
         /// </param>
-		/// <param name="blocks">
-		/// A JSON-based array of structured blocks, presented as a 
-		/// URL-encoded string.
-		/// </param>
+        /// <param name="blocks">
+        /// A JSON-based array of structured blocks, presented as a 
+        /// URL-encoded string.
+        /// </param>
         /// <param name='text'>
         /// Text of the message to send. See below for an explanation of
         /// [formatting](#formatting). This field is usually required, unless
@@ -174,10 +174,10 @@ namespace Slack.Api.CSharp.WebApi
         /// A JSON-based array of structured attachments, presented as a
         /// URL-encoded string.
         /// </param>
-		/// <param name="blocks">
-		/// A JSON-based array of structured blocks, presented as a 
-		/// URL-encoded string.
-		/// </param>
+        /// <param name="blocks">
+        /// A JSON-based array of structured blocks, presented as a 
+        /// URL-encoded string.
+        /// </param>
         /// <param name='unfurlLinks'>
         /// Pass true to enable unfurling of primarily text-based content.
         /// </param>
@@ -294,11 +294,11 @@ namespace Slack.Api.CSharp.WebApi
         /// URL-encoded string. This field is required when not presenting
         /// `text` or `blocks`.
         /// </param>
-		/// <param name="blocks">
-		/// A JSON-based array of structured blocks, presented as a 
-		/// URL-encoded string. This field is required when not presenting
-		/// `text` or `attachments`.
-		/// </param>
+        /// <param name="blocks">
+        /// A JSON-based array of structured blocks, presented as a 
+        /// URL-encoded string. This field is required when not presenting
+        /// `text` or `attachments`.
+        /// </param>
         /// <param name='text'>
         /// New text for the message, using the [default formatting
         /// rules](/docs/formatting). It's not required when presenting

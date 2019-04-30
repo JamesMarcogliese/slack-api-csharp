@@ -35,7 +35,7 @@ namespace Slack.Api.CSharp.WebApi.Models
             Channel = channel;
             Text = text;
             Ts = ts;
-			Error = error;
+            Error = error;
             CustomInit();
         }
         /// <summary>
@@ -72,8 +72,8 @@ namespace Slack.Api.CSharp.WebApi.Models
         [JsonProperty(PropertyName = "ok")]
         public static bool Ok { get; private set; }
 
-		[JsonProperty("error")]
-		public string Error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
         /// <summary>
         /// Validate the object.
