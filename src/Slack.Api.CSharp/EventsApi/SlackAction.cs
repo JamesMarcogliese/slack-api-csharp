@@ -34,10 +34,26 @@ namespace Slack.Api.CSharp.EventsApi
         public string AttachmentId { get; set; }
         [JsonProperty("token")]
         public string Token { get; set; }
+        [JsonProperty("message")]
+        public SlackMessage Message { get; set; }
         [JsonProperty("original_message")]
-        public TheActualEventAnObjectThatHappened OriginalMessage { get; set; }
+        private SlackMessage OriginalMessage { set { Message = value; } }
         [JsonProperty("response_url")]
         public string ResponseUrl { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
+        [JsonProperty("api_app_id")]
+        public string Api_App_ID { get; set; }
+        [JsonProperty("submission")]
+        public IDictionary<string, string> Submission { get; set; }
+        [JsonProperty("container")]
+        public Container Container { get; set; }
+        [JsonProperty("trigger_id")]
+        public string Trigger_ID { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        [JsonProperty("value")]
+        public string Value { get; set; }
     }
 
     public partial class Team
@@ -62,6 +78,10 @@ namespace Slack.Api.CSharp.EventsApi
         public string Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
+        [JsonProperty("username")]
+        private string UserName { set { Name = value; } }
+        [JsonProperty("team_id")]
+        public string Team_ID { get; set; }
     }
 
     public partial class Action1
@@ -74,6 +94,14 @@ namespace Slack.Api.CSharp.EventsApi
         public string Value { get; set; }
         [JsonProperty("selected_options")]
         public Selected_Options[] SelectedOptions { get; set; }
+        [JsonProperty("block_id")]
+        public string Block_ID { get; set; }
+        [JsonProperty("action_id")]
+        public string Action_ID { get; set; }
+        [JsonProperty("text")]
+        public SlackText Text { get; set; }
+        [JsonProperty("action_ts")]
+        public string Action_TS { get; set; }
     }
 
     public partial class Selected_Options
@@ -81,6 +109,23 @@ namespace Slack.Api.CSharp.EventsApi
         [JsonProperty("value")]
         public string value { get; set; }
     }
+
+    public partial class Container
+    {
+        [JsonProperty("type")]
+        public string Type { get; set; }
+        [JsonProperty("message_ts")]
+        public string Message_TS { get; set; }
+        [JsonProperty("attachment_id")]
+        public int Attachment_ID { get; set; }
+        [JsonProperty("channel_id")]
+        public string Channel_ID { get; set; }
+        [JsonProperty("is_ephemeral")]
+        public bool Is_Ephemeral { get; set; }
+        [JsonProperty("is_app_unfurl")]
+        public bool Is_App_Unfurl { get; set; }
+    }
+
     public partial class SlackAction
     {
         public static SlackAction FromJson(string json) => JsonConvert.DeserializeObject<SlackAction>(json, Converter.Settings);
